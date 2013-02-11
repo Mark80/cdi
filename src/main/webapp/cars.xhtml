@@ -21,9 +21,12 @@
                 <h:commandButton value="Remove" action="#{carListView.remove(car)}"/>
             </h:column>
         </h:dataTable>
+        <h:commandButton value="Login" action="#{currenUserManager.login}"/>
     </h:form>
 
     #{carDetailsView.car.model}
+
+    #{currentUser}:#{currentUser.email}
 
 </h:body>
 

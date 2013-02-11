@@ -2,6 +2,7 @@ package pl.itcrowd.tutorials.itc;
 
 import javax.enterprise.context.SessionScoped;
 import javax.enterprise.event.Observes;
+import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 
@@ -10,6 +11,10 @@ import java.io.Serializable;
 public class CarDetailsView implements Serializable {
 
     private Car car;
+
+    @Inject
+    @CurrentUser
+    private User user;
 
     public Car getCar()
     {
